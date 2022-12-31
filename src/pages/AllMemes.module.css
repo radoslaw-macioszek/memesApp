@@ -1,0 +1,50 @@
+.twoColumnsGrid {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	column-gap: 10rem;
+}
+
+.sixColumnsGrid ul {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+	column-gap: 2rem;
+}
+
+.allMemesColumn,
+.favoritesColumn {
+	padding: 2rem;
+
+	height: 90vh;
+	overflow: scroll;
+	box-shadow: 5px 10px 26px rgba(51, 51, 51, 0.295);
+	border-radius: 0.5rem;
+}
+
+h1 {
+	color: #77002e;
+	margin-bottom: 1rem;
+}
+
+span {
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+@media screen and (max-width: 900px) {
+	.twoColumnsGrid {
+		grid-template-columns: 1fr;
+	}
+
+	.favoritesColumn {
+		height: 30vh;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+		margin-bottom: 5rem;
+	}
+}
+
+@media screen and (min-width: 300px) {
+	.twoColumnsGrid {
+		column-gap: 2rem;
+	}
+}
